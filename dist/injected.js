@@ -15,7 +15,7 @@
       sTdRank = '<td>' + dRank + '</td>';
     }
 
-    const myNum = Number(dsScore[0].replace(/,/, ''));
+    const myNum = Number(dsScore[0].replace(/,/g, ''));
 
     sTdScore = '<td class="' + g['dsFcClass'][ddFc[0]] + '">' + dsScore[0] + '</td>';
     for (i = 1; i < dsScore.length; i++) {
@@ -26,7 +26,7 @@
         sTdScore += '<td class="' + g['dsFcClass'][ddFc[i]] + '">' + dsScore[i] + '</td>';
       }
       else {
-        const targetNum = Number(dsScore[i].replace(/,/, ''));
+        const targetNum = Number(dsScore[i].replace(/,/g, ''));
         const diff = targetNum - myNum;
         const sign =  diff > 0  ? '+'
                     : diff == 0 ? '+-'
