@@ -1,0 +1,1 @@
+(()=>{var e,t,r;e=chrome.runtime.getURL("injected.js"),t=document.getElementsByTagName("body")[0],(r=document.createElement("script")).setAttribute("type","text/javascript"),r.setAttribute("src",e),t.appendChild(r)})();

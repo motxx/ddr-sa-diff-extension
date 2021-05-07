@@ -1,0 +1,17 @@
+{
+  "name": "DDR SkillAttack Diff",
+  "description": "ライバル間でスコアの差分を表示",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "run_at":"document_idle",
+      "matches": ["http://skillattack.com/sa4/dancer_score.php?_=rival*"],
+      "js": ["content_scripts.js"]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["/injected.js"],
+    "matches": ["<all_urls>"]
+  }]
+}
